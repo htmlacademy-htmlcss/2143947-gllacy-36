@@ -962,7 +962,7 @@ a {
 /* ABOUT-US */
 
 .about-us {
-  background-image: url("../images/waffle-background.jpg");
+  background-image: url("../images/about-us-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
@@ -1040,7 +1040,7 @@ a {
 
 .subscribe-news {
   width: 570px;
-  background-image: url("../images/subscribe-news-background.jpg");
+  background-image: url("../images/subscribe-news-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;

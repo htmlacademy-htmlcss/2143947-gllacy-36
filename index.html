@@ -34,7 +34,7 @@
               <div class="header-navigation-menu">
                 <ul class="header-navigation-menu-list">
                   <li class="header-navigation-menu-item">
-                    <a class="header-navigation-menu-link" href="#">Новинки</a>
+                    <a class="header-navigation-menu-link new-products-link" href="#">Новинки</a>
                   </li>
                   <li class="header-navigation-menu-item">
                     <a class="header-navigation-menu-link" href="ice-cream.html">Сливочное</a>
@@ -70,33 +70,39 @@
                 <input class="search-form-input" name="search" type="text" aria-label="Поиск по сайту." placeholder="Поиск по сайту" required>
               </div>
             </li>
-            <li class="client-menu-item">
-              <a class="client-menu-link client-login" href="#">Вход</a>
+            <li class="client-menu-item client-login">
+              <a class="client-menu-link client-login-link" href="#">
+                Вход
+                <svg width="16" height="16" viewBox="0 0 16 16" role="img" aria-label="Иконка входа.">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9 1.66667C9 1.29848 9.29848 1 9.66667 1H12.3333C12.8638 1 13.3725 1.21071 13.7475 1.58579C14.1226 1.96086 14.3333 2.46957 14.3333 3V12.3333C14.3333 12.8638 14.1226 13.3725 13.7475 13.7475C13.3725 14.1226 12.8638 14.3333 12.3333 14.3333H9.66667C9.29848 14.3333 9 14.0349 9 13.6667C9 13.2985 9.29848 13 9.66667 13H12.3333C12.5101 13 12.6797 12.9298 12.8047 12.8047C12.9298 12.6797 13 12.5101 13 12.3333V3C13 2.82319 12.9298 2.65362 12.8047 2.5286C12.6797 2.40357 12.5101 2.33333 12.3333 2.33333H9.66667C9.29848 2.33333 9 2.03486 9 1.66667ZM5.86189 3.86193C6.12224 3.60158 6.54435 3.60158 6.8047 3.86193L10.1338 7.19103C10.1509 7.20785 10.1671 7.22559 10.1824 7.24416C10.2142 7.28296 10.2411 7.32451 10.2628 7.36795C10.3079 7.45781 10.3333 7.55927 10.3333 7.66667C10.3333 7.77529 10.3074 7.87785 10.2613 7.96846C10.241 8.00841 10.2164 8.04675 10.1876 8.08278C10.1708 8.10378 10.1527 8.12375 10.1335 8.14256L6.8047 11.4714C6.54435 11.7318 6.12224 11.7318 5.86189 11.4714C5.60154 11.2111 5.60154 10.7889 5.86189 10.5286L8.05715 8.33333H1.66667C1.29848 8.33333 1 8.03486 1 7.66667C1 7.29848 1.29848 7 1.66667 7H8.05715L5.86189 4.80474C5.60154 4.54439 5.60154 4.12228 5.86189 3.86193Z"/>
+                </svg>
+              </a>
               <div class="client-login-wrapper">
                 <h2 class="client-login-heading heading">Личный кабинет</h2>
                 <form class="client-login-form" action="https://echo.htmlacademy.ru/" method="post">
-                  <div class="client-login-form-item email">
-                    <input class="client-login-form-input" type="email" name="email" placeholder="email@example.com" aria-label="Введите e-mail." required>
+                  <div class="client-login-input-wrapper">
+                    <input class="client-login-form-input email" type="email" name="email" placeholder="email@example.com" aria-label="Введите e-mail." required>
+                    <input class="client-login-form-input password" type="password" name="password" placeholder="123456" aria-label="Введите пароль." required>
                   </div>
-                  <div class="client-login-form-item password">
-                    <input class="client-login-form-input" type="password" id="password" name="password" placeholder="123456" aria-label="Введите пароль." required>
-                  </div>
-                  <div>
-                    <button class="client-login-submit-button button" type="submit">Войти</button>
+                  <div class="client-login-submit-wrapper">
+                    <button class="client-login-submit-button button additional-button" type="submit">Войти</button>
                     <ul class="client-login-help-list">
                       <li class="client-login-help-item">
-                        <a class="client-menu-link restore-password-link" href="#">Забыли пароль?</a>
+                        <a class="client-help-menu-link restore-password-link" href="#">Забыли пароль?</a>
                       </li>
                       <li class="client-login-help-item">
-                        <a class="client-menu-link registration-link" href="#">Регистрация</a>
+                        <a class="client-help-menu-link registration-link" href="#">Регистрация</a>
                       </li>
                     </ul>
                   </div>
                 </form>
               </div>
             </li>
-            <li class="client-menu-item">
-              <a class="client-menu-link cart-link cart-empty cart-full" href="#" aria-label="Корзина.">
+            <li class="client-menu-item cart cart-empty cart-full">
+              <a class="client-menu-link cart-link" href="#" aria-label="Корзина.">
+                <svg width="16" height="16" viewBox="0 0 16 16" role="img" aria-label="Иконка корзины.">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.16667 1.25C0.798477 1.25 0.5 1.54848 0.5 1.91667C0.5 2.28486 0.798477 2.58333 1.16667 2.58333H2.93794L3.40537 4.91872C3.40821 4.93667 3.41176 4.95438 3.416 4.97182L4.38338 9.80515L4.3835 9.80571C4.46706 10.2257 4.69562 10.603 5.02921 10.8715C5.36111 11.1387 5.77595 11.2813 6.20183 11.2748H11.8225C12.2484 11.2813 12.6633 11.1387 12.9952 10.8715C13.3289 10.6029 13.5575 10.2254 13.641 9.80515L13.641 9.80515L13.642 9.80016L14.5691 4.93872C14.6063 4.74355 14.5545 4.54195 14.4279 4.38887C14.3012 4.23578 14.1129 4.14716 13.9142 4.14716H4.61072L4.1381 1.78583C4.07574 1.47426 3.80215 1.25 3.4844 1.25H1.16667ZM5.69098 9.54444L4.87759 5.4805H13.1084L12.3328 9.54736C12.31 9.65988 12.2485 9.7609 12.1591 9.83291C12.0691 9.90535 11.9565 9.94383 11.841 9.94162L11.841 9.94149H11.8282H6.19614V9.94137L6.18337 9.94162C6.06787 9.94383 5.95528 9.90535 5.8653 9.83291C5.77531 9.76048 5.71368 9.6587 5.69117 9.5454L5.69098 9.54444ZM4.55739 13.5054C4.55739 12.8175 5.1151 12.2597 5.80307 12.2597C6.49105 12.2597 7.04876 12.8175 7.04876 13.5054C7.04876 14.1934 6.49105 14.7511 5.80307 14.7511C5.1151 14.7511 4.55739 14.1934 4.55739 13.5054ZM10.9307 13.5054C10.9307 12.8175 11.4884 12.2597 12.1764 12.2597C12.8644 12.2597 13.4221 12.8175 13.4221 13.5054C13.4221 14.1934 12.8644 14.7511 12.1764 14.7511C11.4884 14.7511 10.9307 14.1934 10.9307 13.5054Z"/>
+                </svg>
                 <span class="cart-description cart-empty-description">Нет товаров</span>
                 <span class="cart-description cart-full-description">2 товара</span>
               </a>

@@ -185,13 +185,13 @@
             </ul>
             <ul class="slider-social-list">
               <li class="slider-social-item">
-                <a class="social-button telegram" href="https://t.me/htmlacademy" aria-label="Телеграм."></a>
+                <a class="social-link telegram" href="https://t.me/htmlacademy" aria-label="Телеграм."></a>
               </li>
               <li class="slider-social-item">
-                <a class="social-button vkontakte" href="https://vk.com/htmlacademy" aria-label="ВКонтакте."></a>
+                <a class="social-link vkontakte" href="https://vk.com/htmlacademy" aria-label="ВКонтакте."></a>
               </li>
               <li class="slider-social-item">
-                <a class="social-button youtube" href="https://www.youtube.com/client/htmlacademyru" aria-label="Ютуб."></a>
+                <a class="social-link youtube" href="https://www.youtube.com/client/htmlacademyru" aria-label="Ютуб."></a>
               </li>
             </ul>
           </div>
@@ -356,13 +356,13 @@
     <footer class="page-footer">
       <ul class="footer-social-list">
         <li class="footer-social-item">
-          <a class="social-button telegram" href="https://t.me/htmlacademy" aria-label="Телеграм."></a>
+          <a class="social-link telegram" href="https://t.me/htmlacademy" aria-label="Телеграм."></a>
         </li>
         <li class="footer-social-item">
-          <a class="social-button vkontakte" href="https://vk.com/htmlacademy" aria-label="ВКонтакте."></a>
+          <a class="social-link vkontakte" href="https://vk.com/htmlacademy" aria-label="ВКонтакте."></a>
         </li>
         <li class="footer-social-item">
-          <a class="social-button youtube" href="https://www.youtube.com/client/htmlacademyru" aria-label="Ютуб."></a>
+          <a class="social-link youtube" href="https://www.youtube.com/client/htmlacademyru" aria-label="Ютуб."></a>
         </li>
       </ul>
 
@@ -384,20 +384,12 @@
     <section class="modal-container">
       <div class="modal">
         <h2 class="modal-heading heading">Мы обязательно ответим вам!</h2>
-        <button class="button modal-close-button" type="button" aria-label="Закрыть."></button>
+        <button class="modal-close-button" type="button" aria-label="Закрыть."></button>
         <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="user-information">
-            <div class="feedback-form-item username">
-              <input class="modal-form-input" type="text" name="username" placeholder="Имя и фамилия" aria-label="Ваше имя и фамилия." required>
-            </div>
-            <div class="feedback-form-item email">
-              <input class="modal-form-input" type="email" name="email" placeholder="email@example.com" aria-label="Ваш e-mail." required>
-            </div>
-            <div class="feedback-form-item feedback">
-              <textarea class="modal-form-textarea" name="feedback" cols="30" rows="10" placeholder="В свободной форме" aria-label="Ваш отзыв." required></textarea>
-            </div>
-          </div>
-          <button class="modal-submit-button button" type="submit">Отправить</button>
+          <input class="modal-form-input username" type="text" name="username" placeholder="Имя и фамилия" aria-label="Ваше имя и фамилия." required>
+          <input class="modal-form-input email" type="email" name="email" placeholder="email@example.com" aria-label="Ваш e-mail." required>
+          <textarea class="modal-form-textarea feedback" name="feedback" cols="30" rows="10" placeholder="В свободной форме" aria-label="Ваш отзыв." required></textarea>
+          <button class="modal-submit-button button additional-button" type="submit">Отправить</button>
         </form>
       </div>
     </section>

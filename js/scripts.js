@@ -40,3 +40,28 @@ buttonNext.addEventListener('click', () => {
   slides[counter].classList.add('current-slide');
   sliderTabButtons[counter].classList.add('slider-pagination-button-current');
 });
+
+// MODAL-WINDOW
+
+const feedback = document.querySelector('.feedback-form-link');
+const feedbackModal = document.querySelector('.modal-container');
+const modalClose = feedbackModal.querySelector('.modal-close-button');
+
+feedback.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  feedbackModal.classList.add('modal-show');
+});
+
+modalClose.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  feedbackModal.classList.remove('modal-show');
+});
+
+window.addEventListener('keydown', (evt) => {
+  if (evt.keyCode === 27) {
+    if (feedbackModal.classList.contains('modal-show')) {
+      evt.preventDefault();
+      feedbackModal.classList.remove('modal-show');
+    }
+  }
+});

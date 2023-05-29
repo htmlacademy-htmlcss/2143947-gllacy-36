@@ -11,12 +11,17 @@ const clearClasses = () => {
   document.querySelector('.slider-pagination-button-current').classList.remove('slider-pagination-button-current');
 };
 
+const changeColor = (theme) => {
+  document.body.style.backgroundColor = theme;
+};
+
 sliderTabButtons.forEach((tab, index) => {
   tab.addEventListener('click', () => {
     clearClasses();
     counter = index;
     slides[index].classList.add('current-slide');
     tab.classList.add('slider-pagination-button-current');
+    changeColor(slides[index].dataset.theme);
   });
 });
 
@@ -29,6 +34,7 @@ buttonPrevious.addEventListener('click', () => {
 
   slides[counter].classList.add('current-slide');
   sliderTabButtons[counter].classList.add('slider-pagination-button-current');
+  changeColor(slides[counter].dataset.theme);
 });
 
 buttonNext.addEventListener('click', () => {
@@ -39,6 +45,7 @@ buttonNext.addEventListener('click', () => {
   }
   slides[counter].classList.add('current-slide');
   sliderTabButtons[counter].classList.add('slider-pagination-button-current');
+  changeColor(slides[counter].dataset.theme);
 });
 
 // MODAL-WINDOW

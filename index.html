@@ -17,6 +17,7 @@
   </head>
 
   <body class="main-body">
+    <!-- Для добавления кнопкам состояния загрузки нужно в элемент с классом "button" добавить класс "is-loading". -->
     <header class="page-header">
       <div class="header-wrapper">
         <div class="header-navigation-wrapper">
@@ -32,7 +33,7 @@
                     <a class="header-navigation-menu-link new-products-link" href="#">Новинки</a>
                   </li>
                   <li class="header-navigation-menu-item">
-                    <a class="header-navigation-menu-link" href="ice-cream.html">Сливочное</a>
+                    <a class="header-navigation-menu-link" href="creamy-catalog.html">Сливочное</a>
                   </li>
                   <li class="header-navigation-menu-item">
                     <a class="header-navigation-menu-link" href="#">Щербеты</a>
@@ -56,7 +57,7 @@
             <button class="client-menu-button search-button" aria-label="Поиск."></button>
             <div class="popup search-form-wrapper">
               <input class="search-form-input" name="search" type="search" aria-label="Поиск по сайту." placeholder="Поиск по сайту" required>
-              <button class="search-delete-button" type="button" aria-label="Удалить введенный текст."></button>
+              <button class="search-cancel-button" type="button" aria-label="Удалить введенный текст."></button>
             </div>
           </div>
           <div class="client-menu-item client-login">
@@ -113,7 +114,7 @@
                   <button class="cart-item-delete-button" type="button" aria-label="Удалить из корзины"></button>
                 </li>
               </ul>
-              <div class="order">
+              <div class="order-wrapper">
                 <a class="order-button button additional-button" href="#">Оформить заказ</a>
                 <span class="order-price">Итого: <span>790 ₽</span></span>
               </div>
@@ -130,7 +131,7 @@
         <h2 class="visually-hidden">Слайдер. Популярные товары.</h2>
         <div class="slider-wrapper">
           <ul class="slider-list">
-            <li class="slider-item current-slide">
+            <li class="slider-item current-slide" data-theme="#FEAFC3">
               <div class="slider-text-block">
                 <h3 class="slider-heading heading">Нежный пломбир<br> с клубничным джемом</h3>
                 <p class="slider-description">Натуральное мороженое из свежих сливок<br> и молока с вкуснейшим клубничным джемом –<br> это идеальный десерт для всей семьи.</p>
@@ -142,7 +143,7 @@
                 </div>
               </div>
             </li>
-            <li class="slider-item">
+            <li class="slider-item" data-theme="#69A9FF">
               <div class="slider-text-block">
                 <h3 class="slider-heading heading">Сливочное мороженое<br> со вкусом банана</h3>
                 <p class="slider-description">Сливочное мороженое с ярким банановым<br> вкусом подарит вам свежесть и наслаждение<br> даже в самый жаркий летний день.</p>
@@ -154,7 +155,7 @@
                 </div>
               </div>
             </li>
-            <li class="slider-item">
+            <li class="slider-item" data-theme="#FCC850">
               <div class="slider-text-block">
                 <h3 class="slider-heading heading">Карамельный пломбир<br> с маршмеллоу</h3>
                 <p class="slider-description">Необычный сладкий десерт с карамельным<br> топпингом и кусочками зефира завоюет<br> сердца сладкоежек всех возрастов.</p>
@@ -219,7 +220,7 @@
         <ul class="popular-products-list">
           <li class="popular-product-item">
             <div class="popular-product-image-wrapper">
-              <img class="popular-product-image" width="168" height="168" src="images/raspberry.png" alt="Мороженое Малинка.">
+              <img width="168" height="168" src="images/raspberry.png" alt="Мороженое Малинка.">
             </div>
             <div class="popular-product-text-wrapper">
               <a class="popular-product-link" href="#" aria-label="Ссылка на страницу продукта.">Малинка</a>
@@ -232,7 +233,7 @@
           </li>
           <li class="popular-product-item">
             <div class="popular-product-image-wrapper">
-              <img class="popular-product-image" width="168" height="168" src="images/pistachio.png" alt="Мороженое Фисташка.">
+              <img width="168" height="168" src="images/pistachio.png" alt="Мороженое Фисташка.">
             </div>
             <div class="popular-product-text-wrapper">
               <a class="popular-product-link" href="#" aria-label="Ссылка на страницу продукта.">Фисташка</a>
@@ -245,7 +246,7 @@
           </li>
           <li class="popular-product-item">
             <div class="popular-product-image-wrapper">
-              <img class="popular-product-image" width="168" height="168" src="images/blueberry.png" alt="Мороженое Черника.">
+              <img width="168" height="168" src="images/blueberry.png" alt="Мороженое Черника.">
             </div>
             <div class="popular-product-text-wrapper">
               <a class="popular-product-link" href="#" aria-label="Ссылка на страницу продукта.">Черника</a>
@@ -258,7 +259,7 @@
           </li>
           <li class="popular-product-item">
             <div class="popular-product-image-wrapper">
-              <img class="popular-product-image" width="168" height="168" src="images/bubble-gum.png" alt="Мороженое Бабл-гам.">
+              <img width="168" height="168" src="images/bubble-gum.png" alt="Мороженое Бабл-гам.">
             </div>
             <div class="popular-product-text-wrapper">
               <a class="popular-product-link" href="#" aria-label="Ссылка на страницу продукта.">Бабл-гам</a>
@@ -294,7 +295,7 @@
         <h2 class="visually-hidden">Подписка на блог и рассылку новостей.</h2>
         <div class="subscribe-blog">
           <h3 class="subscribe-blog-heading heading">Новое в нашем блоге</h3>
-          <a class="subscribe-blog-description" href="#" >10 способов сервировки<br> фруктовых щербетов<br> к столу</a>
+          <a class="subscribe-blog-link" href="#" >10 способов сервировки<br> фруктовых щербетов<br> к столу</a>
         </div>
         <div class="subscribe-news">
           <p class="subscribe-news-description">Подпишитесь на нашу сладкую рассылку и будьте всегда<br> в курсе всего самого вкусного, что у нас происходит. Обещаем<br> не спамить и не слать всякой ненужной ерунды. Честно =)</p>
@@ -367,7 +368,7 @@
       </ul>
 
       <div class="vendors-block">
-        <h2 class="vendors-link vendors-heading">Для поставщиков</h2>
+        <h2 class="vendors-heading">Для поставщиков</h2>
         <a class="vendors-link" href="#">Наши документы</a>
         <a class="vendors-link" href="#">О производстве</a>
         <a class="vendors-link" href="#">Экологические стандарты</a>

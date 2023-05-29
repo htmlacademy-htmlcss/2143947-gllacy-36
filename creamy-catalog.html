@@ -17,6 +17,7 @@
   </head>
 
   <body class="main-body">
+    <!-- Для добавления кнопкам состояния загрузки нужно в элемент с классом "button" добавить класс "is-loading". -->
     <header class="page-header">
       <div class="header-wrapper">
         <div class="header-navigation-wrapper">
@@ -32,7 +33,7 @@
                     <a class="header-navigation-menu-link new-products-link" href="#">Новинки</a>
                   </li>
                   <li class="header-navigation-menu-item">
-                    <a class="header-navigation-menu-link current-menu-link" href="ice-cream.html">Сливочное</a>
+                    <a class="header-navigation-menu-link" href="creamy-catalog.html">Сливочное</a>
                   </li>
                   <li class="header-navigation-menu-item">
                     <a class="header-navigation-menu-link" href="#">Щербеты</a>
@@ -56,6 +57,7 @@
             <button class="client-menu-button search-button" aria-label="Поиск."></button>
             <div class="popup search-form-wrapper">
               <input class="search-form-input" name="search" type="search" aria-label="Поиск по сайту." placeholder="Поиск по сайту" required>
+              <button class="search-cancel-button" type="button" aria-label="Удалить введенный текст."></button>
             </div>
           </div>
           <div class="client-menu-item client-login">
@@ -78,7 +80,7 @@
             </div>
           </div>
           <!-- Для добавления товаров в корзину необходимо заменить класс "cart-empty" на класс "cart-full". -->
-          <div class="client-menu-item cart cart-empty">
+          <div class="client-menu-item cart cart-full">
             <button class="client-menu-button cart-button" type="button" aria-label="Корзина.">
               <span class="cart-description cart-empty-description">Нет товаров</span>
               <span class="cart-description cart-full-description">2 товара</span>
@@ -112,7 +114,7 @@
                   <button class="cart-item-delete-button" type="button" aria-label="Удалить из корзины"></button>
                 </li>
               </ul>
-              <div class="order">
+              <div class="order-wrapper">
                 <a class="order-button button additional-button" href="#">Оформить заказ</a>
                 <span class="order-price">Итого: <span>790 ₽</span></span>
               </div>
@@ -134,7 +136,7 @@
             <a class="breadcrumbs-link" href="#">Каталог</a>
           </li>
           <li class="breadcrumbs-item">
-            <span class="breadcrumbs-link current-breadcrumbs-link" tabindex="0">Сливочное мороженое</span>
+            <span class="breadcrumbs-link current-breadcrumbs-link">Сливочное мороженое</span>
           </li>
         </ol>
         <h2 class="inner-header-heading heading">Сливочное мороженое</h2>
@@ -400,11 +402,7 @@
         <h2 class="visually-hidden">Выбор страницы.</h2>
         <a class="product-button button main-button" href="#">Показать еще</a>
         <div class="pagination">
-          <a class="page-select-link previous-page pagination-link-disabled" href="#" aria-label="Предыдущая страница.">
-            <svg width="16" height="16" viewBox="0 0 16 16" role="img" aria-label="Иконка кнопки переключения страниц.">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.13526 2.8647C6.87557 2.605 6.45451 2.605 6.19481 2.8647C5.93511 3.12439 5.93511 3.54545 6.19481 3.80515L10.3961 8.00643L6.19477 12.2077C5.93508 12.4674 5.93508 12.8885 6.19477 13.1482C6.45447 13.4079 6.87553 13.4079 7.13523 13.1482L11.8039 8.47949C11.8049 8.47855 11.8058 8.47761 11.8068 8.47666C12.0665 8.21696 12.0665 7.79591 11.8068 7.53621L7.13526 2.8647Z"/>
-            </svg>
-          </a>
+          <a class="page-select-link previous-page pagination-link-disabled" href="#" aria-label="Предыдущая страница."></a>
           <ol class="pagination-list">
             <li class="pagination-item">
               <a class="pagination-link pagination-current" href="#">1</a>
@@ -422,11 +420,7 @@
               <a class="pagination-link" href="#">5</a>
             </li>
           </ol>
-          <a class="page-select-link next-page" href="#" aria-label="Следующая страница.">
-            <svg width="16" height="16" viewBox="0 0 16 16" role="img" aria-label="Иконка кнопки переключения страниц.">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.13526 2.8647C6.87557 2.605 6.45451 2.605 6.19481 2.8647C5.93511 3.12439 5.93511 3.54545 6.19481 3.80515L10.3961 8.00643L6.19477 12.2077C5.93508 12.4674 5.93508 12.8885 6.19477 13.1482C6.45447 13.4079 6.87553 13.4079 7.13523 13.1482L11.8039 8.47949C11.8049 8.47855 11.8058 8.47761 11.8068 8.47666C12.0665 8.21696 12.0665 7.79591 11.8068 7.53621L7.13526 2.8647Z"/>
-            </svg>
-          </a>
+          <a class="page-select-link next-page" href="#" aria-label="Следующая страница."></a>
         </div>
       </section>
     </main>
@@ -445,7 +439,7 @@
       </ul>
 
       <div class="vendors-block">
-        <h2 class="vendors-link vendors-heading">Для поставщиков</h2>
+        <h2 class="vendors-heading">Для поставщиков</h2>
         <a class="vendors-link" href="#">Наши документы</a>
         <a class="vendors-link" href="#">О производстве</a>
         <a class="vendors-link" href="#">Экологические стандарты</a>

@@ -17,7 +17,10 @@
   </head>
 
   <body class="main-body">
+
     <!-- Для добавления кнопкам состояния загрузки нужно в элемент с классом "button" добавить класс "is-loading". -->
+    <!-- Для добавления полям ввода состояния ошибки нужно в элементы с классом "form-input" добавить класс "form-input-error". -->
+
     <header class="page-header">
       <div class="header-wrapper">
         <div class="header-navigation-wrapper">
@@ -56,7 +59,7 @@
           <div class="client-menu-item search">
             <button class="client-menu-button search-button" aria-label="Поиск."></button>
             <div class="popup search-form-wrapper">
-              <input class="search-form-input" name="search" type="search" aria-label="Поиск по сайту." placeholder="Поиск по сайту" required>
+              <input class="form-input search-form-input" name="search" type="search" aria-label="Поиск по сайту." placeholder="Поиск по сайту" required>
               <button class="search-cancel-button" type="button" aria-label="Удалить введенный текст."></button>
             </div>
           </div>
@@ -65,8 +68,8 @@
             <div class="popup client-login-wrapper">
               <h2 class="client-login-heading heading">Личный кабинет</h2>
               <form class="client-login-form" action="https://echo.htmlacademy.ru/" method="post">
-                <input class="client-login-form-input email" type="email" name="email" placeholder="email@example.com" aria-label="Введите e-mail." required>
-                <input class="client-login-form-input password" type="password" name="password" value="123456" aria-label="Введите пароль." required>
+                <input class="form-input client-login-form-input email" type="email" name="email" placeholder="Введите e-mail." value="email@example.com" aria-label="Введите e-mail." required>
+                <input class="form-input client-login-form-input password" type="password" name="password" placeholder="Введите пароль." value="123456" aria-label="Введите пароль." required>
                 <button class="client-login-submit-button button additional-button" type="submit">Войти</button>
                 <ul class="client-login-help-list">
                   <li class="client-login-help-item">
@@ -300,7 +303,7 @@
         <div class="subscribe-news">
           <p class="subscribe-news-description">Подпишитесь на нашу сладкую рассылку и будьте всегда<br> в курсе всего самого вкусного, что у нас происходит. Обещаем<br> не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <form class="subscribe-news-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscribe-news-form-input" name="subscribe" type="email" aria-label="Ваш e-mail." placeholder="email@example.com" required>
+            <input class="form-input subscribe-news-form-input" name="subscribe" type="email" aria-label="Ваш e-mail." placeholder="email@example.com" required>
             <button class="subscribe-news-form-button button additional-button" type="submit">Отправить</button>
           </form>
         </div>
@@ -320,12 +323,12 @@
                 Дата
                 <span class="information-tooltip">Введите дату</span>
               </span>
-              <input class="delivery-form-input" type="text" name="date" placeholder="01.04.2020" required>
+              <input class="form-input delivery-form-input" type="text" name="date" placeholder="01.04.2020" required>
             </label>
 
             <label class="delivery-form-label client-telephone" for="telephone">
               <span class="delivery-form-label-description">Телефон</span>
-              <input class="delivery-form-input" type="tel" id="telephone" name="telephone" placeholder="+7 800 999-00-00" required>
+              <input class="form-input delivery-form-input" type="tel" id="telephone" name="telephone" placeholder="+7 800 999-00-00" required>
             </label>
 
             <label class="delivery-form-label client-address" for="address">
@@ -333,7 +336,7 @@
                 Адрес
                 <span class="information-tooltip">Введите название<br> улицы, дома и квартиры</span>
               </span>
-              <input class="delivery-form-input" type="text" id="address" name="address" placeholder="ул. Большая Конюшенная, 19/8" required>
+              <input class="form-input delivery-form-input" type="text" id="address" name="address" placeholder="ул. Большая Конюшенная, 19/8" required>
             </label>
 
             <button class="delivery-submit-button button additional-button" type="submit">Отправить</button>
@@ -387,8 +390,8 @@
         <h2 class="modal-heading heading">Мы обязательно ответим вам!</h2>
         <button class="modal-close-button" type="button" aria-label="Закрыть."></button>
         <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="modal-form-input username" type="text" name="username" placeholder="Имя и фамилия" aria-label="Ваше имя и фамилия." required>
-          <input class="modal-form-input email" type="email" name="email" placeholder="email@example.com" aria-label="Ваш e-mail." required>
+          <input class="form-input modal-form-input username" type="text" name="username" placeholder="Имя и фамилия" aria-label="Ваше имя и фамилия." required>
+          <input class="form-input modal-form-input email" type="email" name="email" placeholder="email@example.com" aria-label="Ваш e-mail." required>
           <textarea class="modal-form-textarea feedback" name="feedback" cols="30" rows="10" placeholder="В свободной форме" aria-label="Ваш отзыв." required></textarea>
           <button class="modal-submit-button button additional-button" type="submit">Отправить</button>
         </form>

@@ -17,7 +17,10 @@
   </head>
 
   <body class="main-body">
+
     <!-- Для добавления кнопкам состояния загрузки нужно в элемент с классом "button" добавить класс "is-loading". -->
+    <!-- Для добавления полям ввода состояния ошибки нужно в элементы с классом "form-input" добавить класс "form-input-error". -->
+
     <header class="page-header">
       <div class="header-wrapper">
         <div class="header-navigation-wrapper">
@@ -56,7 +59,7 @@
           <div class="client-menu-item search">
             <button class="client-menu-button search-button" aria-label="Поиск."></button>
             <div class="popup search-form-wrapper">
-              <input class="search-form-input" name="search" type="search" aria-label="Поиск по сайту." placeholder="Поиск по сайту" required>
+              <input class="form-input search-form-input" name="search" type="search" aria-label="Поиск по сайту." placeholder="Поиск по сайту" required>
               <button class="search-cancel-button" type="button" aria-label="Удалить введенный текст."></button>
             </div>
           </div>
@@ -65,8 +68,8 @@
             <div class="popup client-login-wrapper">
               <h2 class="client-login-heading heading">Личный кабинет</h2>
               <form class="client-login-form" action="https://echo.htmlacademy.ru/" method="post">
-                <input class="client-login-form-input email" type="email" name="email" placeholder="email@example.com" aria-label="Введите e-mail." required>
-                <input class="client-login-form-input password" type="password" name="password" value="123456" aria-label="Введите пароль." required>
+                <input class="form-input client-login-form-input email" type="email" name="email" placeholder="Введите e-mail." value="email@example.com" aria-label="Введите e-mail." required>
+                <input class="form-input client-login-form-input password" type="password" name="password" placeholder="Введите пароль." value="123456" aria-label="Введите пароль." required>
                 <button class="client-login-submit-button button additional-button" type="submit">Войти</button>
                 <ul class="client-login-help-list">
                   <li class="client-login-help-item">
@@ -155,7 +158,13 @@
               </select>
             </fieldset>
             <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Цена: <span>100 ₽</span> – <span>500 ₽</span></legend>
+              <legend class="catalog-filter-title">
+                <span>Цена:</span>
+                <input type="text" aria-label="Минимальная цена." value="100">
+                <span>₽ – </span>
+                <input type="text" aria-label="Максимальная цена." value="500">
+                <span>₽</span>
+              </legend>
               <div class="range-scale">
                 <div class="toggle-wrapper min-price">
                   <button class="range-toggle button" type="button" aria-label="Изменить минимальную цену."></button>

@@ -57,7 +57,7 @@
         <div class="client-menu">
           <a class="client-menu-item phone-link" href="tel:+78005558628">+7 800 555-86-28</a>
           <div class="client-menu-item search">
-            <button class="client-menu-button search-button" aria-label="Поиск."></button>
+            <button class="client-menu-button search-button" type="button" aria-label="Поиск."></button>
             <div class="popup search-form-wrapper">
               <input class="form-input search-form-input" name="search" type="search" aria-label="Поиск по сайту." placeholder="Поиск по сайту" required>
               <button class="search-cancel-button" type="button" aria-label="Удалить введенный текст."></button>
@@ -142,7 +142,7 @@
               </div>
               <div class="slider-images-block">
                 <div class="slider-image-container">
-                  <img src="images/slider-strawberry.png" width="367" height="554" alt="Пломбир с клубничным джемом.">
+                  <img src="images/slider-strawberry.png" width="327" height="507" alt="Пломбир с клубничным джемом.">
                 </div>
               </div>
             </li>
@@ -154,7 +154,7 @@
               </div>
               <div class="slider-images-block">
                 <div class="slider-image-container">
-                  <img src="images/slider-banana.png" width="367" height="554" alt="Сливочное мороженое со вкусом банана.">
+                  <img src="images/slider-banana.png" width="327" height="507" alt="Сливочное мороженое со вкусом банана.">
                 </div>
               </div>
             </li>
@@ -166,7 +166,7 @@
               </div>
               <div class="slider-images-block">
                 <div class="slider-image-container">
-                  <img src="images/slider-marshmallow.png" width="367" height="554" alt="Карамельный пломбир с маршмеллоу.">
+                  <img src="images/slider-marshmallow.png" width="327" height="507" alt="Карамельный пломбир с маршмеллоу.">
                 </div>
               </div>
             </li>
@@ -189,13 +189,13 @@
             </ul>
             <ul class="slider-social-list">
               <li class="slider-social-item">
-                <a class="social-link telegram" href="https://t.me/htmlacademy" aria-label="Телеграм."></a>
+                <a class="social-link telegram" href="https://t.me/htmlacademy" aria-label="Канал HTML-academy в телеграме." target="_blank"></a>
               </li>
               <li class="slider-social-item">
-                <a class="social-link vkontakte" href="https://vk.com/htmlacademy" aria-label="ВКонтакте."></a>
+                <a class="social-link vkontakte" href="https://vk.com/htmlacademy" aria-label="Группа HTML-academy в ВКонтакте." target="_blank"></a>
               </li>
               <li class="slider-social-item">
-                <a class="social-link youtube" href="https://www.youtube.com/client/htmlacademyru" aria-label="Ютуб."></a>
+                <a class="social-link youtube" href="https://www.youtube.com/client/htmlacademyru" aria-label="Канал HTML-academy на ютуб." target="_blank"></a>
               </li>
             </ul>
           </div>
@@ -315,12 +315,13 @@
           <p class="delivery-information-description">Хочется полакомиться любимым десертом,<br> но нет времени съездить в магазин? Закажите<br> доставку мороженого на дом, и курьер<br> привезёт вам ваш заказ в течение часа!</p>
         </div>
         <div class="delivery-form-wrapper">
-          <p class="delivery-form-description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
+          <p class="delivery-form-description">Укажите адрес и дату доставки, и мы свяжемся<br> с вами, чтобы подтвердить заказ.</p>
           <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
 
             <label class="delivery-form-label date">
-              <span class="delivery-form-label-description date-label-text" tabindex="0">
+              <span class="delivery-form-label-description date-label-text">
                 Дата
+                <span class="information-icon"></span>
                 <span class="information-tooltip">Введите дату</span>
               </span>
               <input class="form-input delivery-form-input" type="text" name="date" placeholder="01.04.2020" required>
@@ -332,8 +333,9 @@
             </label>
 
             <label class="delivery-form-label client-address" for="address">
-              <span class="delivery-form-label-description address-label-text" tabindex="0">
+              <span class="delivery-form-label-description address-label-text">
                 Адрес
+                <span class="information-icon"></span>
                 <span class="information-tooltip">Введите название<br> улицы, дома и квартиры</span>
               </span>
               <input class="form-input delivery-form-input" type="text" id="address" name="address" placeholder="ул. Большая Конюшенная, 19/8" required>
@@ -360,13 +362,13 @@
     <footer class="page-footer">
       <ul class="footer-social-list">
         <li class="footer-social-item">
-          <a class="social-link telegram" href="https://t.me/htmlacademy" aria-label="Телеграм."></a>
+          <a class="social-link telegram" href="https://t.me/htmlacademy" aria-label="Канал HTML-academyв телеграме." target="_blank"></a>
         </li>
         <li class="footer-social-item">
-          <a class="social-link vkontakte" href="https://vk.com/htmlacademy" aria-label="ВКонтакте."></a>
+          <a class="social-link vkontakte" href="https://vk.com/htmlacademy" aria-label="Группа HTML-academy в ВКонтакте." target="_blank"></a>
         </li>
         <li class="footer-social-item">
-          <a class="social-link youtube" href="https://www.youtube.com/client/htmlacademyru" aria-label="Ютуб."></a>
+          <a class="social-link youtube" href="https://www.youtube.com/client/htmlacademyru" aria-label="Канал HTML-academy на ютуб." target="_blank"></a>
         </li>
       </ul>
 

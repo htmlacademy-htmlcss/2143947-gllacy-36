@@ -72,3 +72,12 @@ window.addEventListener('keydown', (evt) => {
     }
   }
 });
+
+// SEARCH-INPUT-CANCEL
+
+const searchInput = document.querySelector('.search-form-input');
+const searchCancelButton = document.querySelector('.search-cancel-button');
+searchCancelButton.addEventListener('click', () => {
+  searchInput.value = '';
+  searchInput.focus();
+});

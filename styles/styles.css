@@ -43,6 +43,7 @@ body {
   min-height: 100%;
   margin: 0;
   padding: 0 98px 0 98px;
+  transition: background-color 0.3s ease;
 }
 
 img {
@@ -209,6 +210,7 @@ a {
 .header-navigation-wrapper {
   display: flex;
   column-gap: 16px;
+  align-self: flex-start;
 }
 
 .header-logo-link {
@@ -255,6 +257,7 @@ a {
   position: relative;
   outline: none;
   align-self: start;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .header-navigation-button::before {
@@ -269,7 +272,8 @@ a {
   mask: url("../images/arrow.svg");
   -webkit-mask: url("../images/arrow.svg");
   -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .header-navigation-button:hover {
@@ -333,6 +337,7 @@ a {
   color: #2d3440;
   padding: 6px 13px 6px 16px;
   outline: none;
+  transition: background-color 0.3s ease;
 }
 
 .header-navigation-menu-link:hover,
@@ -347,6 +352,7 @@ a {
 .current-menu-link {
   color: #fcfcfc;
   background-color: #ff4a78;
+  pointer-events: none;
 }
 
 .new-products-link {
@@ -379,6 +385,7 @@ a {
   background-color: transparent;
   border: 2px solid transparent;
   outline: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .header-navigation-link:hover {
@@ -387,17 +394,18 @@ a {
 
 .header-navigation-link:focus-visible {
   background-color: rgba(252, 252, 252, 0.5);
-  border: 2px solid #2d3440;
+  border-color: #2d3440;
 }
 
 .header-navigation-link:active {
   background-color: #fcfcfc;
-  border: 2px solid transparent;
+  border-color: transparent;
 }
 
 .client-menu {
   max-width: 500px;
   justify-content: flex-end;
+  align-self: flex-start;
   flex-wrap: wrap;
   padding: 12px 0 12px 0;
   display: flex;
@@ -1808,6 +1816,7 @@ a {
 
 .vendors-block {
   justify-self: center;
+  align-self: start;
   display: grid;
   grid-template-rows: min-content min-content;
   grid-template-columns: auto auto;
@@ -2021,7 +2030,7 @@ a {
   margin: 0 0 8px 0;
   padding: 0 0 0 16px;
 }
-
+/*
 .catalog-filter-title input {
   background-color: transparent;
   border: none;
@@ -2031,7 +2040,7 @@ a {
   line-height: 20px;
   color: #2d3440;
   padding: 0;
-}
+} */
 
 .catalog-filter-list {
   display: flex;
@@ -2334,6 +2343,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-grow: 1;
 }
 
 .product-catalog-link {
@@ -2362,6 +2372,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: auto 0 0 0;
 }
 
 .product-catalog-price {

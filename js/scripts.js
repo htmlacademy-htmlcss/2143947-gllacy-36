@@ -64,14 +64,14 @@ modalClose.addEventListener('click', (evt) => {
   feedbackModal.classList.remove('modal-show');
 });
 
-// feedbackModal.addEventListener('click', (evt) => {
-//   if (!evt.target.classList.contains('modal')) {
-//     feedbackModal.classList.remove('modal-show');
-//   }
-// });
+feedbackModal.addEventListener('click', (evt) => {
+  if (!evt.target.closest('.modal')) {
+    feedbackModal.classList.remove('modal-show');
+  }
+});
 
 window.addEventListener('keydown', (evt) => {
-  if (evt.keyCode === 27) {
+  if (evt.key === 27) {
     if (feedbackModal.classList.contains('modal-show')) {
       evt.preventDefault();
       feedbackModal.classList.remove('modal-show');

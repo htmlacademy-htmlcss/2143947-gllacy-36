@@ -24,82 +24,98 @@
     <header class="page-header">
       <div class="header-wrapper">
         <div class="header-navigation-wrapper">
-          <a class="header-logo-link" href="index.html">
+          <a class="header-logo-link link" href="index.html">
             <img width="137" height="56" src="images/gllacy-logo.svg" alt="Логотип магазина Глейси.">
           </a>
           <nav class="header-navigation">
             <div class="header-navigation-menu-wrapper">
-              <button class="header-navigation-button" type="button">Каталог</button>
+              <a class="header-navigation-button link" href="#">Каталог</a>
               <div class="popup header-navigation-menu">
                 <ul class="header-navigation-menu-list">
                   <li class="header-navigation-menu-item">
-                    <a class="header-navigation-menu-link new-products-link" href="#">Новинки</a>
+                    <a class="header-navigation-menu-link new-products-link link" href="#">Новинки</a>
                   </li>
                   <li class="header-navigation-menu-item">
-                    <a class="header-navigation-menu-link current-menu-link" href="creamy-catalog.html">Сливочное</a>
+                    <a class="header-navigation-menu-link current-menu-link link" href="creamy-catalog.html">Сливочное</a>
                   </li>
                   <li class="header-navigation-menu-item">
-                    <a class="header-navigation-menu-link" href="#">Щербеты</a>
+                    <a class="header-navigation-menu-link link" href="#">Щербеты</a>
                   </li>
                   <li class="header-navigation-menu-item">
-                    <a class="header-navigation-menu-link" href="#">Фруктовый лед</a>
+                    <a class="header-navigation-menu-link link" href="#">Фруктовый лед</a>
                   </li>
                   <li class="header-navigation-menu-item">
-                    <a class="header-navigation-menu-link" href="#">Мелорин</a>
+                    <a class="header-navigation-menu-link link" href="#">Мелорин</a>
                   </li>
                 </ul>
               </div>
             </div>
-            <a class="header-navigation-link" href="#">Доставка и оплата</a>
-            <a class="header-navigation-link" href="#">О компании</a>
+            <a class="header-navigation-link link" href="#">Доставка и оплата</a>
+            <a class="header-navigation-link link" href="#">О компании</a>
           </nav>
         </div>
         <div class="client-menu">
-          <a class="client-menu-item phone-link" href="tel:+78005558628">+7 800 555-86-28</a>
+          <a class="client-menu-item phone-link link" href="tel:+78005558628">+7 800 555-86-28</a>
           <div class="client-menu-item search">
-            <button class="client-menu-button search-button" type="button" aria-label="Поиск."></button>
+            <button class="client-menu-button search-button" type="button">
+              <span class="visually-hidden">Поиск.</span>
+            </button>
             <div class="popup search-form-wrapper">
-              <input class="form-input search-form-input" name="search" type="search" aria-label="Поиск по сайту." placeholder="Поиск по сайту" required>
-              <button class="search-cancel-button" type="button" aria-label="Удалить введенный текст."></button>
+              <form class="client-search-form" action="https://echo.htmlacademy.ru/" method="post">
+                <label>
+                  <span class="visually-hidden">Поиск по сайту.</span>
+                  <input class="form-input search-form-input" name="search" type="search" placeholder="Поиск по сайту" required>
+                </label>
+                <button class="search-cancel-button" type="button">
+                  <span class="visually-hidden">Удалить введенный текст.</span>
+                </button>
+              </form>
             </div>
           </div>
           <div class="client-menu-item client-login">
             <button class="client-menu-button client-login-button" type="button">Вход</button>
             <div class="popup client-login-wrapper">
-              <h2 class="client-login-heading heading">Личный кабинет</h2>
+              <p class="client-login-heading heading">Личный кабинет</p>
               <form class="client-login-form" action="https://echo.htmlacademy.ru/" method="post">
-                <input class="form-input client-login-form-input email" type="email" name="email" placeholder="Введите e-mail." value="email@example.com" aria-label="Введите e-mail." required>
-                <input class="form-input client-login-form-input password" type="password" name="password" placeholder="Введите пароль." value="123456" aria-label="Введите пароль." required>
+                <label>
+                  <span class="visually-hidden">Введите e-mail.</span>
+                  <input class="form-input client-login-form-input email" type="email" name="email" placeholder="Введите e-mail." value="email@example.com" required>
+                </label>
+                <label>
+                  <span class="visually-hidden">Введите пароль.</span>
+                  <input class="form-input client-login-form-input password" type="password" name="password" placeholder="Введите пароль." value="123456" required>
+                </label>
                 <button class="client-login-submit-button button additional-button" type="submit">Войти</button>
                 <ul class="client-login-help-list">
                   <li class="client-login-help-item">
-                    <a class="client-help-menu-link restore-password-link" href="#">Забыли пароль?</a>
+                    <a class="client-help-menu-link restore-password-link link" href="#">Забыли пароль?</a>
                   </li>
                   <li class="client-login-help-item">
-                    <a class="client-help-menu-link registration-link" href="#">Регистрация</a>
+                    <a class="client-help-menu-link registration-link link" href="#">Регистрация</a>
                   </li>
                 </ul>
               </form>
             </div>
           </div>
-          <!-- Для удаления товаров из корзины необходимо заменить класс "cart-full" на класс "cart-empty". -->
+          <!-- Для добавления товаров в корзину необходимо заменить класс "cart-empty" на класс "cart-full". -->
           <div class="client-menu-item cart cart-full">
-            <button class="client-menu-button cart-button" type="button" aria-label="Корзина.">
+            <button class="client-menu-button cart-button" type="button">
+              <span class="visually-hidden">Корзина.</span>
               <span class="cart-description cart-empty-description">Нет товаров</span>
               <span class="cart-description cart-full-description">2 товара</span>
             </button>
             <div class="popup cart-wrapper cart-empty-wrapper">
-              <h2 class="cart-heading heading">Ваша корзина пока пуста</h2>
+              <p class="cart-heading heading">Ваша корзина пока пуста</p>
             </div>
             <div class="popup cart-wrapper cart-full-wrapper">
-              <h2 class="cart-heading heading">Корзина</h2>
+              <p class="cart-heading heading">Корзина</p>
               <ul class="cart-list">
                 <li class="cart-item">
                   <div class="cart-image-wrapper">
                     <img src="images/raspberry.png" width="46" height="46" alt="Мороженое малинка.">
                   </div>
                   <div class="cart-inner">
-                    <a class="cart-inner-product-link" href="#">Малинка</a>
+                    <a class="cart-inner-product-link link" href="#">Малинка</a>
                     <span class="cart-inner-product-weight">1 кг х 310 ₽</span>
                   </div>
                   <span class="cart-item-price">310 ₽</span>
@@ -110,7 +126,7 @@
                     <img src="images/bubble-gum.png" width="46" height="46" alt="Мороженое бабл-гам.">
                   </div>
                   <div class="cart-inner">
-                    <a class="cart-inner-product-link" href="#">Бабл-гам</a>
+                    <a class="cart-inner-product-link link" href="#">Бабл-гам</a>
                     <span class="cart-inner-product-weight">1,5 кг х 320 ₽</span>
                   </div>
                   <span class="cart-item-price">480 ₽</span>
@@ -118,7 +134,7 @@
                 </li>
               </ul>
               <div class="order-wrapper">
-                <a class="order-button button additional-button" href="#">Оформить заказ</a>
+                <a class="order-button button additional-button link" href="#">Оформить заказ</a>
                 <span class="order-price">Итого: <span>790 ₽</span></span>
               </div>
             </div>
@@ -133,10 +149,10 @@
       <section class="inner-header">
         <ol class="breadcrumbs">
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html">Главная</a>
+            <a class="breadcrumbs-link link" href="index.html">Главная</a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="#">Каталог</a>
+            <a class="breadcrumbs-link link" href="#">Каталог</a>
           </li>
           <li class="breadcrumbs-item">
             <span class="breadcrumbs-link current-breadcrumbs-link">Сливочное мороженое</span>
@@ -147,24 +163,40 @@
 
       <section class="catalog-filter">
         <h2 class="visually-hidden">Фильтры</h2>
-        <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="catalog-filter-form" id="filters" action="https://echo.htmlacademy.ru/" method="get">
           <div class="catalog-filter-block">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Сортировка:</legend>
-              <select class="select-control" aria-label="Сортировка">
+              <select class="select-control" form="filters" name="sort" aria-label="Сортировка">
                 <option value="popular">по популярности</option>
                 <option value="price">по цене</option>
                 <option value="in stock">по наличию</option>
               </select>
             </fieldset>
             <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Цена: 100 ₽ – 500 ₽</legend>
+              <legend class="catalog-filter-title">
+                <span>Цена: </span>
+                <label>
+                  <span class="visually-hidden">Минимальная цена.</span>
+                  <input type="text" name="min-price" value="100">
+                </label>
+                <span>₽ – </span>
+                <label>
+                  <span class="visually-hidden">Максимальная цена.</span>
+                  <input type="text" name="max-price" value="500">
+                </label>
+                <span>₽</span>
+              </legend>
               <div class="range-scale">
                 <div class="toggle-wrapper min-price">
-                  <button class="range-toggle button" type="button" aria-label="Изменить минимальную цену."></button>
+                  <button class="range-toggle button" type="button">
+                    <span class="visually-hidden">Изменить минимальную цену.</span>
+                  </button>
                 </div>
                 <div class="toggle-wrapper max-price">
-                  <button class="range-toggle button" type="button" aria-label="Изменить максимальную цену."></button>
+                  <button class="range-toggle button" type="button">
+                    <span class="visually-hidden">Изменить максимальную цену.</span>
+                  </button>
                 </div>
               </div>
             </fieldset>
@@ -247,11 +279,13 @@
               <img width="168" height="168" src="images/raspberry.png" alt="Мороженое Малинка." loading="lazy">
             </div>
             <div class="product-catalog-text-wrapper">
-              <a class="product-catalog-link" href="#" aria-label="Ссылка на страницу продукта.">Малинка</a>
+              <a class="product-catalog-link link" href="#" aria-label="Ссылка на страницу продукта.">Малинка</a>
               <p class="product-catalog-description">Сливочное мороженое<br> с малиновым джемом</p>
               <div class="product-catalog-price-wrapper">
                 <span class="product-catalog-price">310 ₽/кг</span>
-                <button class="product-cart-button button" type="button" aria-label="Добавить в корзину."></button>
+                <button class="product-cart-button button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
               </div>
             </div>
           </li>
@@ -260,11 +294,13 @@
               <img width="168" height="168" src="images/pistachio.png" alt="Мороженое Фисташка." loading="lazy">
             </div>
             <div class="product-catalog-text-wrapper">
-              <a class="product-catalog-link" href="#" aria-label="Ссылка на страницу продукта.">Фисташка</a>
+              <a class="product-catalog-link link" href="#" aria-label="Ссылка на страницу продукта.">Фисташка</a>
               <p class="product-catalog-description">Фисташковый пломбир<br> с кусочками шоколада</p>
               <div class="product-catalog-price-wrapper">
                 <span class="product-catalog-price">340 ₽/кг</span>
-                <button class="product-cart-button button" type="button" aria-label="Добавить в корзину."></button>
+                <button class="product-cart-button button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
               </div>
             </div>
           </li>
@@ -273,11 +309,13 @@
               <img width="168" height="168" src="images/blueberry.png" alt="Мороженое Черника." loading="lazy">
             </div>
             <div class="product-catalog-text-wrapper">
-              <a class="product-catalog-link" href="#" aria-label="Ссылка на страницу продукта.">Черника</a>
+              <a class="product-catalog-link link" href="#" aria-label="Ссылка на страницу продукта.">Черника</a>
               <p class="product-catalog-description">Крем-брюле<br> с черничным джемом</p>
               <div class="product-catalog-price-wrapper">
                 <span class="product-catalog-price">330 ₽/кг</span>
-                <button class="product-cart-button button" type="button" aria-label="Добавить в корзину."></button>
+                <button class="product-cart-button button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
               </div>
             </div>
           </li>
@@ -286,11 +324,13 @@
               <img width="168" height="168" src="images/bubble-gum.png" alt="Мороженое Бабл-гам." loading="lazy">
             </div>
             <div class="product-catalog-text-wrapper">
-              <a class="product-catalog-link" href="#" aria-label="Ссылка на страницу продукта.">Бабл-гам</a>
+              <a class="product-catalog-link link" href="#" aria-label="Ссылка на страницу продукта.">Бабл-гам</a>
               <p class="product-catalog-description">Ванильный пломбир<br> со сладкой посыпкой</p>
               <div class="product-catalog-price-wrapper">
                 <span class="product-catalog-price">320 ₽/кг</span>
-                <button class="product-cart-button button" type="button" aria-label="Добавить в корзину."></button>
+                <button class="product-cart-button button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
               </div>
             </div>
           </li>
@@ -299,11 +339,13 @@
               <img width="168" height="168" src="images/blackberry.png" alt="Мороженое Ежевика." loading="lazy">
             </div>
             <div class="product-catalog-text-wrapper">
-              <a class="product-catalog-link" href="#" aria-label="Ссылка на страницу продукта.">Ежевика</a>
+              <a class="product-catalog-link link" href="#" aria-label="Ссылка на страницу продукта.">Ежевика</a>
               <p class="product-catalog-description">Сливочное мороженое<br> с ежевичным джемом</p>
               <div class="product-catalog-price-wrapper">
                 <span class="product-catalog-price">330 ₽/кг</span>
-                <button class="product-cart-button button" type="button" aria-label="Добавить в корзину."></button>
+                <button class="product-cart-button button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
               </div>
             </div>
           </li>
@@ -312,11 +354,13 @@
               <img width="168" height="168" src="images/banana.png" alt="Мороженое Банан." loading="lazy">
             </div>
             <div class="product-catalog-text-wrapper">
-              <a class="product-catalog-link" href="#" aria-label="Ссылка на страницу продукта.">Банан</a>
+              <a class="product-catalog-link link" href="#" aria-label="Ссылка на страницу продукта.">Банан</a>
               <p class="product-catalog-description">Сливочный пломбир<br> с банановым вкусом</p>
               <div class="product-catalog-price-wrapper">
                 <span class="product-catalog-price">340 ₽/кг</span>
-                <button class="product-cart-button button" type="button" aria-label="Добавить в корзину."></button>
+                <button class="product-cart-button button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
               </div>
             </div>
           </li>
@@ -325,11 +369,13 @@
               <img width="168" height="168" src="images/chocolate.png" alt="Мороженое Шоколадка." loading="lazy">
             </div>
             <div class="product-catalog-text-wrapper">
-              <a class="product-catalog-link" href="#" aria-label="Ссылка на страницу продукта.">Шоколадка</a>
+              <a class="product-catalog-link link" href="#" aria-label="Ссылка на страницу продукта.">Шоколадка</a>
               <p class="product-catalog-description">Классический<br> шоколадный пломбир</p>
               <div class="product-catalog-price-wrapper">
                 <span class="product-catalog-price">270 ₽/кг</span>
-                <button class="product-cart-button button" type="button" aria-label="Добавить в корзину."></button>
+                <button class="product-cart-button button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
               </div>
             </div>
           </li>
@@ -338,11 +384,13 @@
               <img width="168" height="168" src="images/strawberry.png" alt="Мороженое Клубничка." loading="lazy">
             </div>
             <div class="product-catalog-text-wrapper">
-              <a class="product-catalog-link" href="#" aria-label="Ссылка на страницу продукта.">Клубничка</a>
+              <a class="product-catalog-link link" href="#" aria-label="Ссылка на страницу продукта.">Клубничка</a>
               <p class="product-catalog-description">Сливочный пломбир<br> с клубничным вкусом</p>
               <div class="product-catalog-price-wrapper">
                 <span class="product-catalog-price">300 ₽/кг</span>
-                <button class="product-cart-button button" type="button" aria-label="Добавить в корзину."></button>
+                <button class="product-cart-button button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
               </div>
             </div>
           </li>
@@ -351,11 +399,13 @@
               <img width="168" height="168" src="images/lemon.png" alt="Мороженое Лимон." loading="lazy">
             </div>
             <div class="product-catalog-text-wrapper">
-              <a class="product-catalog-link" href="#" aria-label="Ссылка на страницу продукта.">Лимон</a>
+              <a class="product-catalog-link link" href="#" aria-label="Ссылка на страницу продукта.">Лимон</a>
               <p class="product-catalog-description">Освежающий<br> лимонный сорбет</p>
               <div class="product-catalog-price-wrapper">
                 <span class="product-catalog-price">310 ₽/кг</span>
-                <button class="product-cart-button button" type="button" aria-label="Добавить в корзину."></button>
+                <button class="product-cart-button button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
               </div>
             </div>
           </li>
@@ -364,11 +414,13 @@
               <img width="168" height="168" src="images/menthol.png" alt="Мороженое Ментол." loading="lazy">
             </div>
             <div class="product-catalog-text-wrapper">
-              <a class="product-catalog-link" href="#" aria-label="Ссылка на страницу продукта.">Ментол</a>
+              <a class="product-catalog-link link" href="#" aria-label="Ссылка на страницу продукта.">Ментол</a>
               <p class="product-catalog-description">Сливочный пломбир<br> с ментоловым сиропом</p>
               <div class="product-catalog-price-wrapper">
                 <span class="product-catalog-price">320 ₽/кг</span>
-                <button class="product-cart-button button" type="button" aria-label="Добавить в корзину."></button>
+                <button class="product-cart-button button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
               </div>
             </div>
           </li>
@@ -377,11 +429,13 @@
               <img width="168" height="168" src="images/nut.png" alt="Мороженое Орешек." loading="lazy">
             </div>
             <div class="product-catalog-text-wrapper">
-              <a class="product-catalog-link" href="#" aria-label="Ссылка на страницу продукта.">Орешек</a>
+              <a class="product-catalog-link link" href="#" aria-label="Ссылка на страницу продукта.">Орешек</a>
               <p class="product-catalog-description">Фисташковый пломбир<br> с шоколадным сиропом</p>
               <div class="product-catalog-price-wrapper">
                 <span class="product-catalog-price">360 ₽/кг</span>
-                <button class="product-cart-button button" type="button" aria-label="Добавить в корзину."></button>
+                <button class="product-cart-button button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
               </div>
             </div>
           </li>
@@ -390,11 +444,13 @@
               <img width="168" height="168" src="images/creme-brulee.png" alt="Мороженое Крем-брюле." loading="lazy">
             </div>
             <div class="product-catalog-text-wrapper">
-              <a class="product-catalog-link" href="#" aria-label="Ссылка на страницу продукта.">Крем-брюле</a>
+              <a class="product-catalog-link link" href="#" aria-label="Ссылка на страницу продукта.">Крем-брюле</a>
               <p class="product-catalog-description">Классическое<br> крем-брюле</p>
               <div class="product-catalog-price-wrapper">
                 <span class="product-catalog-price">280 ₽/кг</span>
-                <button class="product-cart-button button" type="button" aria-label="Добавить в корзину."></button>
+                <button class="product-cart-button button" type="button">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </button>
               </div>
             </div>
           </li>
@@ -403,27 +459,31 @@
 
       <section class="pagination-block">
         <h2 class="visually-hidden">Выбор страницы.</h2>
-        <a class="product-button button main-button" href="#">Показать еще</a>
+        <a class="product-button button main-button link" href="#">Показать еще</a>
         <div class="pagination">
-          <a class="page-select-link previous-page pagination-link-disabled" aria-label="Предыдущая страница."></a>
+          <a class="page-select-link previous-page pagination-link-disabled link">
+            <span class="visually-hidden">Предыдущая страница.</span>
+          </a>
           <ol class="pagination-list">
             <li class="pagination-item">
-              <a class="pagination-link pagination-current">1</a>
+              <a class="pagination-link pagination-current link">1</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
+              <a class="pagination-link link" href="#">2</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
+              <a class="pagination-link link" href="#">3</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">4</a>
+              <a class="pagination-link link" href="#">4</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">5</a>
+              <a class="pagination-link link" href="#">5</a>
             </li>
           </ol>
-          <a class="page-select-link next-page" href="#" aria-label="Следующая страница."></a>
+          <a class="page-select-link next-page link" href="#">
+            <span class="visually-hidden">Следующая страница.</span>
+          </a>
         </div>
       </section>
     </main>
@@ -431,28 +491,34 @@
     <footer class="page-footer">
       <ul class="footer-social-list">
         <li class="footer-social-item">
-          <a class="social-link telegram" href="https://t.me/htmlacademy" aria-label="Канал HTML-academy в телеграме." target="_blank"></a>
+          <a class="social-link telegram link" href="https://t.me/htmlacademy" target="_blank">
+            <span class="visually-hidden">Канал HTML-academy в телеграме.</span>
+          </a>
         </li>
         <li class="footer-social-item">
-          <a class="social-link vkontakte" href="https://vk.com/htmlacademy" aria-label="Группа HTML-academy в ВКонтакте." target="_blank"></a>
+          <a class="social-link vkontakte link" href="https://vk.com/htmlacademy" target="_blank">
+            <span class="visually-hidden">Группа HTML-academy в ВКонтакте.</span>
+          </a>
         </li>
         <li class="footer-social-item">
-          <a class="social-link youtube" href="https://www.youtube.com/client/htmlacademyru" aria-label="Канал HTML-academy на ютуб." target="_blank"></a>
+          <a class="social-link youtube link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+            <span class="visually-hidden">Канал HTML-academy на ютуб.</span>
+          </a>
         </li>
       </ul>
 
       <div class="vendors-block">
         <h2 class="vendors-heading">Для поставщиков</h2>
-        <a class="vendors-link" href="#">Наши документы</a>
-        <a class="vendors-link" href="#">О производстве</a>
-        <a class="vendors-link" href="#">Экологические стандарты</a>
+        <a class="vendors-link link" href="#">Наши документы</a>
+        <a class="vendors-link link" href="#">О производстве</a>
+        <a class="vendors-link link" href="#">Экологические стандарты</a>
       </div>
 
       <div class="site-developer">
-        <a class="developer-logo-link" href="https://htmlacademy.ru/" aria-label="Сайт html academy." target="_blank">
+        <a class="developer-logo-link link" href="https://htmlacademy.ru/" target="_blank">
           <img src="images/logo-htmlacademy.svg" width="93" height="27" alt="Логотип html academy.">
         </a>
-        <p class="copyright">Сделано в <a class="developer-link" href="https://htmlacademy.ru/" target="_blank">.html academy</a> © 2021</p>
+        <p class="copyright">Сделано в <a class="developer-link link" href="https://htmlacademy.ru/" target="_blank">.html academy</a> © 2021</p>
       </div>
     </footer>
   </body>
